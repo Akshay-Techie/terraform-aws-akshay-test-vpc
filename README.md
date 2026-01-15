@@ -94,21 +94,19 @@ The module is designed to be flexible, maintainable, and follows Terraform best 
 ## Project Structure
 
 ```
-proj-own-module-vpc/
-├── root-main.tf              # Root module configuration (module consumer)
-├── root-outputs.tf           # Root module outputs
-├── terraform.tfstate         # Terraform state file
-├── terraform.tfstate.backup  # State backup
-├── .terraform/               # Terraform working directory (generated)
-├── .terraform.lock.hcl       # Dependency lock file (generated)
-│
-└── module/
-    └── vpc/                  # VPC Module
-        ├── main.tf           # VPC resources definition
-        ├── variable.tf       # Input variable declarations
-        ├── outputs.tf        # Module output values
-        ├── versions.tf       # Terraform and provider versions
-        ├── README.md         # Module documentation (this file)
+terraform-aws-akshay-test-vpc/
+├── .gitignore              # Git ignore rules
+├── LICENSE                 # License file
+├── main.tf                 # Root module configuration
+├── outputs.tf              # Root module outputs
+├── README.md               # Project documentation
+├── variable.tf             # Input variables
+├── versions.tf             # Provider and Terraform version constraints
+├── examples/
+│   └── complete/
+│       ├── main.tf         # Example usage of the module
+│       ├── outputs.tf      # Outputs for the example
+│       └── README.md       # Documentation for the example
 ```
 
 ---
